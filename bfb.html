@@ -1,4 +1,71 @@
-link="bfb.css"
+<link rel="stylesheet" type="text/css" href="bfb.css">
 
 <h1>FUPD</h1>
 <h2>Recieve the most brew for your buck!</h2>
+
+<div align="center">
+	<div class="form">
+		<form id="form1">
+			Price:<br>
+			<input id="price1" type="text" name="price" value=""><br>
+			Fluid Oz:<br>
+			<input id="oz1" type="text" name="size" value=""><br>
+			ABV:<br>
+			<input id="ABV1" type="text" name="percentage" value=""><br>
+			<input type="button" value="Calculate" onclick="calc_1()">
+			<br>
+		</form>
+		<p1 id="calc1"></p1>
+	</div>
+	<div class="form">
+		<form id="form2">
+			Price:<br>
+			<input id="price2" type="text" name="price" value=""><br>
+			Fluid Oz:<br>
+			<input id="oz2" type="text" name="size" value=""><br>
+			ABV:<br>
+			<input id="ABV2" type="text" name="percentage" value=""><br>
+			<input type="button" value="Calculate" onclick="calc_2()">
+			<br>
+		</form>
+		<p1 id="calc2"></p1>
+	</div>
+</div>
+
+<script>
+	function calc_1() {
+		var price = document.getElementById("price1").value;
+		var oz = document.getElementById("oz1").value;
+		var ABV = document.getElementById("ABV1").value;
+
+
+		console.log(ABV)
+		console.log("WORKED")
+
+		var dec_alc = ABV/100
+		var oz_by_dec = oz * dec_alc
+		var final = oz_by_dec/price
+
+		var final_num = final.toFixed(2);
+
+		document.getElementById("calc1").innerHTML = final_num;
+	}
+
+	function calc_2() {
+		var price = document.getElementById("price2").value;
+		var oz = document.getElementById("oz2").value;
+		var ABV = document.getElementById("ABV2").value;
+
+
+		console.log(ABV)
+		console.log("WORKED")
+
+		var dec_alc = ABV/100
+		var oz_by_dec = oz * dec_alc
+		var final = oz_by_dec/price
+
+		var final_num = final.toFixed(2);
+
+		document.getElementById("calc2").innerHTML = final_num;
+	}
+</script>

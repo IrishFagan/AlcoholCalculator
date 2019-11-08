@@ -5,3 +5,15 @@ h1 {
 h2 {
 	font-size: 1.2em;
 }
+
+h1,h2 {
+	text-align: center;
+}
+
+.form {
+	align: center;
+	display: inline-block;
+	padding-top: 50px;
+	padding: 2%;
+	margin: auto;
+}
