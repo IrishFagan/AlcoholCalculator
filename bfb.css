@@ -11,9 +11,17 @@ h1,h2 {
 }
 
 .form {
-	align: center;
 	display: inline-block;
 	padding-top: 50px;
-	padding: 2%;
+	padding: 1%;
 	margin: auto;
+}
+
+#price1,#oz1,#ABV1,#price2,#oz2,#ABV2 {
+	margin: 4px;
+	padding: 3px;
+}
+
+#calculate {
+	margin-top: 10px;
 }
