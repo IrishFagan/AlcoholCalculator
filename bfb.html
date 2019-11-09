@@ -1,45 +1,49 @@
 <link rel="stylesheet" type="text/css" href="bfb.css">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
-<h1>FUPD</h1>
-<h2>Recieve the most brew for your buck!</h2>
-
-<div align="center">
-	<div class="form">
-		<form id="form1">
-			Price<br>
-			<input id="price1" type="text" name="price" value=""><br>
-			Fluid Oz<br>
-			<input id="oz1" type="text" name="size" value=""><br>
-			ABV<br>
-			<input id="ABV1" type="text" name="percentage" value=""><br>
-			<div>
-				<p>Multiples?</p>
-				<input id="checkbox_1" type="checkbox" onclick="num_clicked1()">
-				<input id="num_1" type="number" min="1" max="30" value="1" style="display:none"><br>
-			</div>
-		</form>
+<div id="main">
+	<div align="center">
+		<h1>Brew For Buck</h1>
+		<h2>Most alcohol for least amount of money!</h2>
+		<div class="form">
+			<form id="form1">
+				<p id="title">Price</p><br>
+				<input class="inputfield" id="price1" type="text" name="price" value=""><br>
+				<p id="title">Fluid Oz</p><br>
+				<input class="inputfield" id="oz1" type="text" name="size" value=""><br>
+				<p id="title">ABV</p><br>
+				<input class="inputfield" id="ABV1" type="text" name="percentage" value=""><br>
+				<div>
+					<p>Multiples?</p>
+					<input id="checkbox_1" type="checkbox" onclick="num_clicked1()">
+					<input class="inputfield" id="num_1" type="number" min="1" max="30" value="1" style="display:none"><br>
+				</div>
+			</form>
+		</div>
+		<div class="form">
+			<form id="form2">
+				<p id="title">Price</p><br>
+				<input class="inputfield" id="price2" type="text" name="price" value=""><br>
+				<p id="title">Fluid Oz</p><br>
+				<input class="inputfield" id="oz2" type="text" name="size" value=""><br>
+				<p id="title">ABV</p><br>
+				<input class="inputfield" id="ABV2" type="text" name="percentage" value=""><br>
+				<div>
+					<p>Multiples?</p>
+					<input id="checkbox_2" type="checkbox" onclick="num_clicked2()">
+					<input class="inputfield" id="num_2" type="number" min="1" max="30" value="1" style="display:none"><br>
+				</div>
+			</form>
+		</div>
+		<div>
+			<button id="calculate" value="Calculate" onclick="calc_2(),calc_1()">Calculate</button><br>
+			<p1 id="calc1" style="display:none"></p1>
+			<p1 id="calc2" style="display:none"></p1>
+		</div>
 	</div>
-	<div class="form">
-		<form id="form2">
-			Price<br>
-			<input id="price2" type="text" name="price" value=""><br>
-			Fluid Oz<br>
-			<input id="oz2" type="text" name="size" value=""><br>
-			ABV<br>
-			<input id="ABV2" type="text" name="percentage" value=""><br>
-			<div>
-				<p>Multiples?</p>
-				<input id="checkbox_2" type="checkbox" onclick="num_clicked2()">
-				<input id="num_2" type="number" min="1" max="30" value="1" style="display:none"><br>
-			</div>
-		</form>
-	</div><br>
-	<button id="calculate" value="Calculate" onclick="calc_2(),calc_1()">Calculate</button><br>
-	<p1 id="calc1"></p1>
-	<p1 id="calc2"></p1>
 </div>
-
-
 
 <script>
 	function num_clicked1() {
@@ -79,6 +83,7 @@
 		var final_num = final.toFixed(2)
 
 		document.getElementById("calc1").innerHTML = final_num;
+		document.getElementById("calc1").style.display = "inline-block";
 	}
 
 	function calc_2() {
@@ -94,5 +99,6 @@
 		var final_num = final.toFixed(2)
 
 		document.getElementById("calc2").innerHTML = final_num;
+		document.getElementById("calc2").style.display = "inline-block";
 	}
 </script>
