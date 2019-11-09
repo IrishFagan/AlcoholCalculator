@@ -77,31 +77,55 @@
 		var price = document.getElementById("price1").value;
 		var oz = document.getElementById("oz1").value;
 		var ABV = document.getElementById("ABV1").value;
-		
-		var dec_alc = ABV/100
-		var oz_by_dec = oz * dec_alc
-		var extra = document.getElementById("num_1").value;
-		var div_price = price/extra
-		var final = oz_by_dec/div_price
-		var final_num = final.toFixed(2)
+		var calc = document.getElementById("calc1");
+		calc.style.display = "inline-block";
 
-		document.getElementById("calc1").innerHTML = final_num;
-		document.getElementById("calc1").style.display = "inline-block";
+		if(price == "") {
+			console.log("PRICE invalid")
+			calc.innerHTML = "Not valid price value"
+		} else if(oz == "") {
+			console.log("oz invalid")
+			calc.innerHTML = "Not valid ounce value"
+		} else if(ABV == "") {
+			console.log("abv invalid")
+			calc.innerHTML = "Not valid ABV value"
+		} else {
+			console.log("valid")
+			var dec_alc = ABV/100
+			var oz_by_dec = oz * dec_alc
+			var extra = document.getElementById("num_1").value;
+			var div_price = price/extra
+			var final = oz_by_dec/div_price
+			var final_num = final.toFixed(2)
+			calc.innerHTML = final_num;
+		}
 	}
 
 	function calc_2() {
 		var price = document.getElementById("price2").value;
 		var oz = document.getElementById("oz2").value;
 		var ABV = document.getElementById("ABV2").value;
+		var calc = document.getElementById("calc2");
+		calc.style.display = "inline-block";
 
-		var dec_alc = ABV/100
-		var oz_by_dec = oz * dec_alc
-		var extra = document.getElementById("num_1").value;
-		var div_price = price/extra
-		var final = oz_by_dec/div_price
-		var final_num = final.toFixed(2)
-
-		document.getElementById("calc2").innerHTML = final_num;
-		document.getElementById("calc2").style.display = "inline-block";
+		if(price == "") {
+			console.log("PRICE invalid")
+			calc.innerHTML = "Not valid price value"
+		} else if(oz == "") {
+			console.log("oz invalid")
+			calc.innerHTML = "Not valid ounce value"
+		} else if(ABV == "") {
+			console.log("abv invalid")
+			calc.innerHTML = "Not valid ABV value"
+		} else {
+			console.log("valid")
+			var dec_alc = ABV/100
+			var oz_by_dec = oz * dec_alc
+			var extra = document.getElementById("num_2").value;
+			var div_price = price/extra
+			var final = oz_by_dec/div_price
+			var final_num = final.toFixed(2)
+			calc.innerHTML = final_num;
+		}
 	}
 </script>
