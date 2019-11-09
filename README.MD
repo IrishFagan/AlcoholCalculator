@@ -4,7 +4,7 @@ This program is meant to get the user the most brew for their buck. It takes pri
 
 This will start out as a web-based applicaton, but will eventually evolve into a mobile applicaton.
 
-# TODO
+## TODO
 
 Add list of beers to database with appropriate information
 
