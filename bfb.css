@@ -1,12 +1,36 @@
+@font-face {
+	font-family: "Bebas";
+	src: url("Bebas-Regular.ttf") format("truetype")
+}
+
+@font-face {
+	font-family: "Comic Sans";
+	src: url(comic.ttf) format("truetype")
+}
+
+body {
+	background-color: rgb(230,230,230);
+	border: 2px solid black;
+}
+
 h1 {
-	font-size: 3em;
+	font-family: 'Bebas', sans-serif;
+	font-size: 4.5em;
 }
 
 h2 {
-	font-size: 1.2em;
+	display: in;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.5em;
+}
+
+p {
+	font-family: 'Bebas', sans-serif;
+	display: inline-block;
 }
 
 h1,h2 {
+	display: block;
 	text-align: center;
 }
 
@@ -17,11 +41,39 @@ h1,h2 {
 	margin: auto;
 }
 
+.inputfield {
+	border: 1px solid black;
+	border-radius: 2px;
+	box-shadow: 2px 2px;
+}
+
 #price1,#oz1,#ABV1,#price2,#oz2,#ABV2 {
+	font-family: 'Open Sans', sans-serif;
 	margin: 4px;
 	padding: 3px;
 }
 
 #calculate {
+	font-family: 'Bebas', Fallback, sans-serif;
+	padding: 15px;
 	margin-top: 10px;
+	background-color: inherit;
+	color: black;
+}
+
+#calc1,#calc2 {
+	font-family: 'Bebas', Fallback, sans-serif;
+	border: 2px solid black;
+	padding: 15px;
+	margin-top: 4%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#title {
+	font-family: 'Bebas', sans-serif;
+}
+
+#checkbox_1, #checkbox_2 {
+	border: 4px solid black;
 }
