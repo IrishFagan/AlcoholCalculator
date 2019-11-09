@@ -7,5 +7,7 @@ This will start out as a web-based applicaton, but will eventually evolve into a
 # TODO
 
 Add list of beers to database with appropriate information
+
 Add ability for users to add their own beers to the database
+
 Add check for if the values are not integers
