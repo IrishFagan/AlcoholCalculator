@@ -77,3 +77,8 @@ h1,h2 {
 #checkbox_1, #checkbox_2 {
 	border: 4px solid black;
 }
+
+footer {
+	display: block;
+	margin-top: 10%;
+}
