@@ -16,7 +16,7 @@
 				<input class="inputfield" id="ABV1" type="text" name="percentage" value=""><br>
 				<div>
 					<p>Multiples?</p>
-					<input id="checkbox_1" type="checkbox" onclick="num_clicked1()">
+					<input id="checkbox_1" type="checkbox" onclick="num_clicked(document.getElementById('num_1'), document.getElementById('checkbox_1'))">
 					<input class="inputfield" id="num_1" type="number" min="1" max="30" value="1" style="display:none"><br>
 				</div>
 			</form>
@@ -31,13 +31,15 @@
 				<input class="inputfield" id="ABV2" type="text" name="percentage" value=""><br>
 				<div>
 					<p>Multiples?</p>
-					<input id="checkbox_2" type="checkbox" onclick="num_clicked2()">
+					<input id="checkbox_2" type="checkbox" onclick="num_clicked(document.getElementById('num_2'), document.getElementById('checkbox_2'))">
 					<input class="inputfield" id="num_2" type="number" min="1" max="30" value="1" style="display:none"><br>
 				</div>
 			</form>
 		</div>
 		<div>
-			<button id="calculate" value="Calculate" onclick="calc_2(),calc_1()">Calculate</button><br>
+			<button id="calculate" value="Calculate" onclick="
+			calculate(document.getElementById('price1').value, document.getElementById('oz1').value, document.getElementById('ABV1').value, document.getElementById('calc1'), document.getElementById('num_1').value);
+			calculate(document.getElementById('price2').value, document.getElementById('oz2').value, document.getElementById('ABV2').value, document.getElementById('calc2'), document.getElementById('num_2').value)">Calculate</button><br>
 			<p1 id="calc1" style="display:none"></p1>
 			<p1 id="calc2" style="display:none"></p1>
 		</div>
@@ -49,36 +51,33 @@
 </footer>
 
 <script>
-	function num_clicked1() {
-		var num = document.getElementById("num_1");
-		var checkbox = document.getElementById("checkbox_1");
+	function num_clicked(multi_num, multi_checkbox) {
+		var num = multi_num
+		var checkbox = multi_checkbox
 
 		if(checkbox.checked == false) {
-			num.style.display = "none";
-			num.value = 1;
+			num.style.display = "none"
+			num.value = 1
+			return false
 		} else {
-			num.style.display = "inline-block";
+			num.style.display = "inline-block"
+			return true
 		}
 	}
 
-	function num_clicked2() {
-		var num = document.getElementById("num_2");
-		var checkbox = document.getElementById("checkbox_2");
+	function calculate(price_form, ABV_form, oz_form, calc_p, multi_num) {
+		var price = price_form
+		var oz = oz_form
+		var ABV = ABV_form
+		var calc = calc_p
+		var num = multi_num
 
-		if(checkbox.checked == false) {
-			num.style.display = "none";
-			num.value = 1;
-		} else {
-			num.style.display = "inline-block";
-		}
-	}
-
-	function calc_1() {
-		var price = document.getElementById("price1").value;
-		var oz = document.getElementById("oz1").value;
-		var ABV = document.getElementById("ABV1").value;
-		var calc = document.getElementById("calc1");
 		calc.style.display = "inline-block";
+
+		console.log(price)
+		console.log(oz)
+		console.log(ABV)
+		console.log(multi_num)
 
 		if(price == "") {
 			console.log("PRICE invalid")
@@ -93,36 +92,7 @@
 			console.log("valid")
 			var dec_alc = ABV/100
 			var oz_by_dec = oz * dec_alc
-			var extra = document.getElementById("num_1").value;
-			var div_price = price/extra
-			var final = oz_by_dec/div_price
-			var final_num = final.toFixed(2)
-			calc.innerHTML = final_num;
-		}
-	}
-
-	function calc_2() {
-		var price = document.getElementById("price2").value;
-		var oz = document.getElementById("oz2").value;
-		var ABV = document.getElementById("ABV2").value;
-		var calc = document.getElementById("calc2");
-		calc.style.display = "inline-block";
-
-		if(price == "") {
-			console.log("PRICE invalid")
-			calc.innerHTML = "Not valid price value"
-		} else if(oz == "") {
-			console.log("oz invalid")
-			calc.innerHTML = "Not valid ounce value"
-		} else if(ABV == "") {
-			console.log("abv invalid")
-			calc.innerHTML = "Not valid ABV value"
-		} else {
-			console.log("valid")
-			var dec_alc = ABV/100
-			var oz_by_dec = oz * dec_alc
-			var extra = document.getElementById("num_2").value;
-			var div_price = price/extra
+			var div_price = price/num
 			var final = oz_by_dec/div_price
 			var final_num = final.toFixed(2)
 			calc.innerHTML = final_num;
