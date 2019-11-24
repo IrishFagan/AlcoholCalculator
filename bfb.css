@@ -84,3 +84,12 @@ footer {
 	display: block;
 	margin-top: 10%;
 }
+
+#footer_p {
+	margin-top: 2.5%;
+	margin-bottom: 0%;
+}
+
+#footer_p2 {
+	margin: 2%;
+}
