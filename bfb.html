@@ -8,31 +8,35 @@
 		<h1>Brew For Buck</h1>
 		<div class="form">
 			<form id="form1">
-				<p id="title">Price</p><br>
+				<p class="title">Price</p><br>
 				<input class="inputfield" id="price1" type="text" name="price" value=""><br>
-				<p id="title">Fluid Oz</p><br>
+				<p class="title" id="fluid_1">Fluid Oz</p><br>
 				<input class="inputfield" id="oz1" type="text" name="size" value=""><br>
-				<p id="title">ABV</p><br>
+				<p class="title">ABV</p><br>
 				<input class="inputfield" id="ABV1" type="text" name="percentage" value=""><br>
 				<div>
 					<p>Multiples?</p>
 					<input id="checkbox_1" type="checkbox" onclick="num_clicked(document.getElementById('num_1'), document.getElementById('checkbox_1'))">
 					<input class="inputfield" id="num_1" type="number" min="1" max="30" value="1" style="display:none"><br>
+					<p>Milileters?</p>
+					<input id="checkbox_3" type="checkbox" onclick="mil_selected(document.getElementById('checkbox_3'), document.getElementById('fluid_1'))">
 				</div>
 			</form>
 		</div>
 		<div class="form">
 			<form id="form2">
-				<p id="title">Price</p><br>
+				<p class="title">Price</p><br>
 				<input class="inputfield" id="price2" type="text" name="price" value=""><br>
-				<p id="title">Fluid Oz</p><br>
+				<p class="title" id="fluid_2">Fluid Oz</p><br>
 				<input class="inputfield" id="oz2" type="text" name="size" value=""><br>
-				<p id="title">ABV</p><br>
+				<p class="title">ABV</p><br>
 				<input class="inputfield" id="ABV2" type="text" name="percentage" value=""><br>
 				<div>
 					<p>Multiples?</p>
 					<input id="checkbox_2" type="checkbox" onclick="num_clicked(document.getElementById('num_2'), document.getElementById('checkbox_2'))">
 					<input class="inputfield" id="num_2" type="number" min="1" max="30" value="1" style="display:none"><br>
+					<p>Milileters?</p>
+					<input id="checkbox_4" type="checkbox" onclick="mil_selected(document.getElementById('checkbox_4'), document.getElementById('fluid_2'))">
 				</div>
 			</form>
 		</div>
