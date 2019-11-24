@@ -11,19 +11,33 @@ function num_clicked(multi_num, multi_checkbox) {
 	}
 }
 
-function calculate(price_form, oz_form, ABV_form, calc_p, multi_num) {
+function mil_selected(input, title) {
+	if(input.checked == true) {
+		title.innerHTML = "milileters"
+		return true
+	} else {
+		title.innerHTML = "fluid oz"
+		return false
+	}
+}
+
+function calculate(price_form, oz_form, ABV_form, calc_p, multi_num, mil_check) {
 	var price = price_form
 	var oz = oz_form
 	var ABV = ABV_form
 	var calc = calc_p
 	var num = multi_num
+	var checkbox = mil_check
 	calc.style.display = "inline-block";
+	if(checkbox.checked == true) {
+		var oz = oz * 0.033814
+	}
 	if(price == "") {
 		console.log("PRICE invalid")
 		calc.innerHTML = "Not valid price value"
 	} else if(oz == "") {
 		console.log("oz invalid")
-		calc.innerHTML = "Not valid ounce value"
+		calc.innerHTML = "Not valid fluid value"
 	} else if(ABV == "") {
 		console.log("abv invalid")
 		calc.innerHTML = "Not valid ABV value"
