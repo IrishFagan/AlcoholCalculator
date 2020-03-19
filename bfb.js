@@ -22,9 +22,9 @@ function mil_selected(input, title) {
 }
 
 function calculate(price_form, oz_form, ABV_form, calc_p, multi_num, mil_check) {
-	var price = price_form
-	var oz = oz_form
-	var ABV = ABV_form
+	var price = price_form.replace(/[^0-9.]/g, "")
+	var oz = oz_form.replace(/[^0-9.]/g, "")
+	var ABV = ABV_form.replace(/[^0-9.]/g, "")
 	var calc = calc_p
 	var num = multi_num
 	var checkbox = mil_check
