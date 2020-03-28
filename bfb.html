@@ -16,10 +16,10 @@
 				<input class="inputfield" id="ABV1" type="text" name="percentage" value=""><br>
 				<div>
 					<p>Multiples?</p>
-					<input id="checkbox_1" type="checkbox" onclick="num_clicked(document.getElementById('num_1'), document.getElementById('checkbox_1'))">
+					<input id="checkbox_1" type="checkbox" onclick="numClicked(document.getElementById('num_1'), document.getElementById('checkbox_1'))">
 					<input class="inputfield" id="num_1" type="number" min="1" max="30" value="1" style="display:none"><br>
 					<p>Milileters?</p>
-					<input id="checkbox_3" type="checkbox" onclick="mil_selected(document.getElementById('checkbox_3'), document.getElementById('fluid_1'))">
+					<input id="checkbox_3" type="checkbox" onclick="milSelected(document.getElementById('checkbox_3'), document.getElementById('fluid_1'))">
 				</div>
 			</form>
 		</div>
@@ -33,10 +33,10 @@
 				<input class="inputfield" id="ABV2" type="text" name="percentage" value=""><br>
 				<div>
 					<p>Multiples?</p>
-					<input id="checkbox_2" type="checkbox" onclick="num_clicked(document.getElementById('num_2'), document.getElementById('checkbox_2'))">
+					<input id="checkbox_2" type="checkbox" onclick="numClicked(document.getElementById('num_2'), document.getElementById('checkbox_2'))">
 					<input class="inputfield" id="num_2" type="number" min="1" max="30" value="1" style="display:none"><br>
 					<p>Milileters?</p>
-					<input id="checkbox_4" type="checkbox" onclick="mil_selected(document.getElementById('checkbox_4'), document.getElementById('fluid_2'))">
+					<input id="checkbox_4" type="checkbox" onclick="milSelected(document.getElementById('checkbox_4'), document.getElementById('fluid_2'))">
 				</div>
 			</form>
 		</div>
@@ -51,8 +51,8 @@
 </div>
 
 <footer align="center">
-	<p id="footer_p">Enter in the price, fluid amount and ABV %! Then just click calculate!</p><br>
-	<p id="footer_p2">You can choose wether or not your drink is in milileters or if there are multiple in a bundle!</p>
+	<p id="footer_p">Enter in the price, fluid amount and ABV %! Then just click calculate to see the amount of ounces in alcohol per dollar.</p><br>
+	<p id="footer_p2">You can choose whether or not your drink is in milileters or if there are multiple in a bundle!</p>
 </footer>
 
 <script src="bfb.js"></script>
