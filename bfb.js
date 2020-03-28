@@ -60,6 +60,13 @@ function compareTotal(calcTotal1, calcTotal2) {
 	calcTotal1.style.backgroundColor = "orange";
 	calcTotal2.style.backgroundColor = "orange";
 
+	if(isFloat(calcTotal1)) {
+		calcTotal1.style.backgroundColor = "green";
+	}
+	if(isFloat(calcTotal2)) {
+		calcTotal2.style.backgroundColor = "green";
+	}
+
 	if(isFloat(calcTotal1) && isFloat(calcTotal2)) {
 		calcTotal1.style.backgroundColor = "green";
 		calcTotal2.style.backgroundColor = "green";
