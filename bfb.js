@@ -25,13 +25,13 @@ function milSelected(input, title) {
 	}
 }
 
-function calculateTotal(price_form, oz_form, ABV_form, calc_p, multi_num, mil_check) {
-	var price = price_form.replace(/[^0-9.]/g, "");
-	var oz = oz_form.replace(/[^0-9.]/g, "");
-	var ABV = ABV_form.replace(/[^0-9.]/g, "");
-	var calc = calc_p;
-	var num = multi_num;
-	var checkbox = mil_check;
+function calculateTotal(priceForm, ozForm, abvForm, calcParam, multiNumberParam, milileterCheck) {
+	var price = priceForm.replace(/[^0-9.]/g, "");
+	var oz = ozForm.replace(/[^0-9.]/g, "");
+	var abv = abvForm.replace(/[^0-9.]/g, "");
+	var calc = calcParam;
+	var num = multiNumberParam;
+	var checkbox = milileterCheck;
 	calc.style.display = "inline-block";
 	if(checkbox.checked == true) {
 		var oz = oz * 0.033814;
@@ -42,12 +42,12 @@ function calculateTotal(price_form, oz_form, ABV_form, calc_p, multi_num, mil_ch
 	} else if(oz == "") {
 		console.log("oz invalid");
 		calc.innerHTML = "Not valid fluid value";
-	} else if(ABV == "") {
+	} else if(abv == "") {
 		console.log("abv invalid");
 		calc.innerHTML = "Not valid ABV value";
 	} else {
 		console.log("valid");
-		var dec_alc = ABV/100;
+		var dec_alc = abv/100;
 		var oz_by_dec = oz * dec_alc;
 		var div_price = price/num;
 		var final = oz_by_dec/div_price;
