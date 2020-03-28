@@ -51,3 +51,12 @@ function calculateTotal(price_form, oz_form, ABV_form, calc_p, multi_num, mil_ch
 		calc.innerHTML = final_num;
 	}
 }
+
+function compareTotal(calcTotal1, calcTotal2) {
+	calcTotal1.style.backgroundColor = "orange";
+	calcTotal2.style.backgroundColor = "orange";
+
+	if(typeof calcTotal1 === "number" && typeof calcTotal2 === "number") {
+
+	}
+}
