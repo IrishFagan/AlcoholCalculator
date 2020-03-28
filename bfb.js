@@ -1,3 +1,7 @@
+function isFloat(value) {
+	return (/^-?[\d]*(\.[\d]+)?$/g).test(value.innerHTML)
+}
+
 function numClicked(multi_num, multi_checkbox) {
 	var num = multi_num;
 	var checkbox = multi_checkbox;
